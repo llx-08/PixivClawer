@@ -24,11 +24,11 @@ def Url2Thunder(url):
 # def download_with_thunder(file_url):
 #     subprocess.call([thunder_path, file_url])
 
-idurl = input("请输入作者id：")
+idurl = input("please enter the author's id：")
 img_url = []
 for i in range(1, 8):
     driver.get("https://www.pixiv.net/member_illust.php?id=" + idurl + "&p=%d" % i)
-    flag = input("登陆完成请输1（其实输入什么结果都是一样的）")
+    flag = input("enter sth after your login:")
     time.sleep(5)
     # print(driver.page_source)
     page = driver.page_source
@@ -53,5 +53,5 @@ for i in range(1, 8):
         time.sleep(5)
         print(i)
     img_url = []
-    print("一页完成")
+    print("one page accomplished")
     time.sleep(5)
